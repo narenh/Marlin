@@ -1239,6 +1239,23 @@ void process_commands()
 
     }
   }
+  
+  else if(code_seen('N'))
+  {
+      switch((int)code_value())
+      {
+	      case 0: // N0 -> N1
+	      case 1: // N1 - Start NURBS
+	        get_coordinates(); // For X Y Z E F
+	        prepare_move();
+	        //ClearToSend();
+	        return;
+	      case 2: // N2  - End NURBS
+	        get_arc_coordinates();
+	        prepare_move();
+	        return;
+		}
+  }
 
   else if(code_seen('T')) 
   {
