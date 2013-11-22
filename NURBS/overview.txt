@@ -1,0 +1,4 @@
+p = degree of curve
+m = n + p + 1 ? (length of knot vector)
+Control Points- 2D Vectors (n)
+Weights - importance of each control point 
