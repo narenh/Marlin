@@ -30,3 +30,5 @@ void curve() {
 	y_out /= Nsum;
 }
 
+
+
