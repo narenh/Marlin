@@ -91,6 +91,8 @@ static const pin_map_t digitalPinMap[] = {
   {&DDRD, &PIND, &PORTD, 7},  // D7 38
   {&DDRG, &PING, &PORTG, 2},  // G2 39
   {&DDRG, &PING, &PORTG, 1},  // G1 40
+  {&DDRG, &PING, &PORTG, 10},  // G10 40
+  {&DDRG, &PING, &PORTG, 11},  // G11 40
   {&DDRG, &PING, &PORTG, 0},  // G0 41
   {&DDRL, &PINL, &PORTL, 7},  // L7 42
   {&DDRL, &PINL, &PORTL, 6},  // L6 43
