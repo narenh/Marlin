@@ -12,7 +12,7 @@ void basis_funs() {
 			basis[r] = saved + right[r+1] * temp;
 			saved = left[j-r] * temp;
 		}
-		N[j] = saved;
+		basis[j] = saved;
 	}
 }
 
