@@ -38,6 +38,7 @@
 #include "language.h"
 
 #define VERSION_STRING  "1.0.0 RC2"
+#define MAX_P 4
 
 // look here for descriptions of gcodes: http://linuxcnc.org/handbook/gcode/g-code.html
 // http://objects.reprap.org/wiki/Mendel_User_Manual:_RepRapGCodes
@@ -173,6 +174,9 @@ static unsigned long starttime=0;
 static unsigned long stoptime=0;
 
 static uint8_t tmp_extruder;
+
+
+
 
 
 //===========================================================================
@@ -574,6 +578,27 @@ void process_commands()
         manage_inactivity(1);
       }
       break;
+      
+    /* NURBS IMPLMENTATION */  
+    case 10:
+      // do something 
+      break;
+    case 11:
+      // do something 
+      break;
+    case 12:
+      // do something 
+      break;
+    case 13:
+      // do something 
+      break;
+    case 14:
+      // do something 
+      break;
+      
+      
+      
+     
     case 28: //G28 Home all Axis one at a time
       saved_feedrate = feedrate;
       saved_feedmultiply = feedmultiply;
@@ -1238,23 +1263,6 @@ void process_commands()
     break;
 
     }
-  }
-  
-  else if(code_seen('N'))
-  {
-      switch((int)code_value())
-      {
-	      case 0: // N0 -> N1
-	      case 1: // N1 - Start NURBS
-	        get_coordinates(); // For X Y Z E F
-	        prepare_move();
-	        //ClearToSend();
-	        return;
-	      case 2: // N2  - End NURBS
-	        get_arc_coordinates();
-	        prepare_move();
-	        return;
-		}
   }
 
   else if(code_seen('T')) 
