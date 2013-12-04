@@ -4,8 +4,8 @@ void basis_funs() {
 	float saved, temp;
 	// todo: set/replace i in terms of p
 	for (int j = 1; j <= degree; j++) {
-		left[j] = u - knot[i+1-j];
-		right[j] = knot[i+j] - u;
+		left[j] = u - knot[p+1-j];
+		right[j] = knot[p+j] - u;
 		saved = 0.0;
 		for (int r = 0; r < j; r++) {
 			temp = basis[r] / (right[r+1] + left[j-r]);
