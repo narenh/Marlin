@@ -91,8 +91,6 @@ static const pin_map_t digitalPinMap[] = {
   {&DDRD, &PIND, &PORTD, 7},  // D7 38
   {&DDRG, &PING, &PORTG, 2},  // G2 39
   {&DDRG, &PING, &PORTG, 1},  // G1 40
-  {&DDRG, &PING, &PORTG, 10},  // G10 40
-  {&DDRG, &PING, &PORTG, 11},  // G11 40
   {&DDRG, &PING, &PORTG, 0},  // G0 41
   {&DDRL, &PINL, &PORTL, 7},  // L7 42
   {&DDRL, &PINL, &PORTL, 6},  // L6 43
@@ -121,7 +119,9 @@ static const pin_map_t digitalPinMap[] = {
   {&DDRK, &PINK, &PORTK, 4},  // K4 66
   {&DDRK, &PINK, &PORTK, 5},  // K5 67
   {&DDRK, &PINK, &PORTK, 6},  // K6 68
-  {&DDRK, &PINK, &PORTK, 7}   // K7 69
+  {&DDRK, &PINK, &PORTK, 7},  // K7 69
+  {&DDRG, &PING, &PORTG, 10}, // G10 70
+  {&DDRG, &PING, &PORTG, 11}  // G11 71
 };
 //------------------------------------------------------------------------------
 #elif defined(__AVR_ATmega644P__)\
